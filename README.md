@@ -10,7 +10,7 @@
 
 ### Screenshots
 
-
+![screenshot](https://user-images.githubusercontent.com/40881197/71419577-1d529280-263e-11ea-82c9-46f1a0e72350.gif)
 
 ### Technologies Used
 
