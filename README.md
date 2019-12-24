@@ -10,7 +10,7 @@
 
 ### Screenshots
 
-![Liri Bot](https://raw.github.com/ANRAx/LIRI-Bot/master/screenshot/screenshot.mp4 "Liri Bot")
+
 
 ### Technologies Used
 
