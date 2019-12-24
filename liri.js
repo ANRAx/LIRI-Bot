@@ -47,7 +47,7 @@ let getMeSpotify = function (songName) {
         }
 
         let songs = data.tracks.items;
-        let data = [];
+        var data = [];
 
         for (let i = 0; i < songs.length; i++) {
           data.push({
