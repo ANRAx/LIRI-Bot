@@ -174,6 +174,4 @@ let runThis = function(argOne, argTwo) {
 };
 
 // MAIN PROCESS
-runThis(process.argv[2], process.argv.slice[3].join(" "));
-
-
+runThis(process.argv[2], process.argv.slice(3).join(" "));
