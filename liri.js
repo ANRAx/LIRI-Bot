@@ -148,3 +148,32 @@ let doWhatItSays = function() {
     });
 };
 
+// Func for determining which command is executed
+let pick = function(caseData, functionData) {
+    switch (caseData) {
+        case "concert-this":
+            getMyBands(functionData);
+            break;
+        case "spotify-this-song":
+            getMeSpotify(functionData);
+            break;
+        case "movie-this":
+            getMovie(functionData);
+            break;
+        case "do-what-it-says":
+            doWhatItSays();
+            break;
+        default:
+        console.log("LIRI doesn't know that");
+    }
+};
+
+// Func to take in CL arguments and execute correct function accordingly
+let runThis = function(argOne, argTwo) {
+    pick(argOne, argTwo);
+};
+
+// MAIN PROCESS
+runThis(process.argv[2], process.argv.slice[3].join(" "));
+
+
