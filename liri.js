@@ -102,3 +102,33 @@ let getMyBands = function(artist) {
         }
     );
 };
+
+// Func for running a Movie Search 
+let getMovie = function(movieName) {
+    if (movieName === undefined) {
+        movieName = "Mr Nobody";
+    }
+
+    let urlHit = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=full&tomatoes=true&apikey=trilogy";
+
+    axios.get(urlHit).then(
+        function(response) {
+            let jsonData = response.data;
+
+            let data = {
+                "Title:" : jsonData.Title,
+                "Year:" : jsonData.Year,
+                "Rated:" : jsonData.Rated,
+                "IMDB Rating:" : jsonData.imdbRating,
+                "Country:" : jsonData.Country,
+                "Language:" : jsonData.Language,
+                "Plot:" : jsonData.Plot,
+                "Actors:" : jsonData.Actors,
+                "Rotten Tomatoes Rating:" : jsonData.Ratings[1].Value
+            };
+
+            console.log(data);
+            writeToLog(data);
+        }
+    );
+};
